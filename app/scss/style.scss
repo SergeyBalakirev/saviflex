@@ -16,10 +16,10 @@
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  ;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &__list {
     display: flex;
@@ -42,6 +42,24 @@
 
     &:hover {
       color: #fff;
+    }
+
+    &--down {
+      position: relative;
+      padding-right: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 13px;
+        height: 9px;
+        background-image: url(../images/arrow-down.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
     }
   }
 
@@ -128,6 +146,20 @@
     color: #FFFFFF;
     text-decoration: none;
   }
+
+
+  &__products {
+    position: absolute;
+    width: 50%;
+    height: 0px;
+    background-color: #fff;
+    transition: all .3s;
+  }
+
+}
+
+.height {
+  height: 100px;
 }
 
 .header-banner {
@@ -203,12 +235,30 @@
     font-size: 48px;
     line-height: 50px;
     max-width: 303px;
+    margin-bottom: 70px;
 
     & span {
       font-weight: 700;
     }
   }
 }
+
+
+.header-banner {
+  &__slider {
+    // overflow: hidden;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+
 
 .application {
   &__inner {
@@ -285,6 +335,22 @@
 
     &:hover .application__item-ico {
       background-color: #E92626;
+    }
+
+    &:hover .application__item-ico--1 {
+      background-image: url(../images/application-ico11.png);
+    }
+
+    &:hover .application__item-ico--2 {
+      background-image: url(../images/application-ico22.png);
+    }
+
+    &:hover .application__item-ico--3 {
+      background-image: url(../images/application-ico33.png);
+    }
+
+    &:hover .application__item-ico--4 {
+      background-image: url(../images/application-ico44.png);
     }
   }
 
@@ -490,6 +556,7 @@
 
     &:hover .tab_item__arrow {
       background-color: #E92626;
+      background-image: url(../images/arrow-2.png);
     }
 
     &:hover .tab_item__link {
