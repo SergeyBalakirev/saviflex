@@ -11,6 +11,7 @@ $(function () {
 
   $('.header-banner__slider-inner').slick({
     arrows: false,
+    dots: true,
   });
 
 
